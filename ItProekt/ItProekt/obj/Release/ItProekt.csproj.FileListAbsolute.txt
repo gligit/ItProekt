@@ -1,0 +1,5 @@
+C:\Users\gligor\Documents\Visual Studio 2010\Projects\ItProekt\ItProekt\bin\ItProekt.dll
+C:\Users\gligor\Documents\Visual Studio 2010\Projects\ItProekt\ItProekt\bin\ItProekt.pdb
+C:\Users\gligor\Documents\Visual Studio 2010\Projects\ItProekt\ItProekt\obj\Release\ResolveAssemblyReference.cache
+C:\Users\gligor\Documents\Visual Studio 2010\Projects\ItProekt\ItProekt\obj\Release\ItProekt.dll
+C:\Users\gligor\Documents\Visual Studio 2010\Projects\ItProekt\ItProekt\obj\Release\ItProekt.pdb

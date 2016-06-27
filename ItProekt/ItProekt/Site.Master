@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ItProekt.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>Апликација за размена на сликички од албуми за светско првенство</title>
+      <link href="~/Styles/Copy of ss8.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    
+    <div class="header" 
+        style="font-size: xx-large; color: #FFFFFF; background-color: #007D00; text-align: center">
+        Размена на сликички од албуми за светско првенство</div>
+         <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Дома" Value="Дома"/>
+                        <asp:MenuItem Text="Барај сликички" Value="Барај сликички">
+                            <asp:MenuItem NavigateUrl="~/Account/SearchPosted.aspx" Text="Купувај/Менуај" 
+                                Value="Купувај/Менуај"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Account/SearchNeeded.aspx" Text="Продавај" 
+                                Value="Продавај"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Account/Manage.aspx" Text="Менаџирај сликички" Value="Менаџирај сликички">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Account/Messages.aspx" Text="Пораки" 
+                            Value="Пораки"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        <div class="main"style="padding: 0px 20px 0px 20px;">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+         	   <div class="footer"
+        style="background-color: #009300; text-align: center; color: #FFFFFF; font-size: large; 
+    position: fixed; width: 100%; bottom: 0px;">
+     <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus0" runat="server" 
+                            style="color: #FFFFFF">Log In</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Добредојде <asp:LoginName ID="HeadLoginName" runat="server" />!
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/LogOut.aspx" ForeColor="White" /> ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+    <asp:LinkButton ID="LinkButton1" runat="server" 
+        PostBackUrl="~/Account/Register.aspx" Font-Size="Large" ForeColor="White">Регистрирај се</asp:LinkButton>
+&nbsp;<asp:LinkButton ID="LinkButton2" runat="server" 
+        PostBackUrl="~/Admin/MakeStickers.aspx" Font-Size="Large" 
+        ForeColor="White">Креирај Сликички</asp:LinkButton>
+          </div>
+    </form>
+</body>
+</html>
